@@ -73,7 +73,15 @@
          * @return string
          */
         public function validateSinglePostalCode(string $postalCode) : string|false {
-            return preg_match($this->getRegex(), $postalCode);
+            // 1. validate length
+            if (strlen($postalCode) < 4 || strlen($postalCode) > 5) {
+                return false;
+            }
+
+            // 2. validate with regex
+            $foundRegex = preg_match($this->getRegex(), $postalCode);
+
+            return $foundRegex ? "PLZ valid" : "No match";
         }
 
         /**

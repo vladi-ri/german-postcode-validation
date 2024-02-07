@@ -23,5 +23,10 @@ Validator for postal code(s) in Germany
 ### Current Release
 #### v1.0
 - Validation of example postal code, that can be validated by submitting the form.
+- Validation of postal codes with 5 digits
+    (no matter if they are really existing, or not)
 
 ### Future Releases
+- Check if postal code is existing (e. g. with an online database)
+- Also validate other postal codes (e. g. with 4 digits)
+- Optimize regex
