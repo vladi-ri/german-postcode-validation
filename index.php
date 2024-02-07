@@ -7,8 +7,9 @@
 
 <?php
     include("GermanPostcodeValidator.php");
-    $validator = new GermanPostcodeValidator();
-    $postCode = $_POST["POSTCODE"];
+    // $validator = new GermanPostcodeValidator("99085");
+    $validator = new GermanPostcodeValidator(["99085", "07545"]);
+    $postCode  = $_POST["POSTCODE"];
 
     $validator->setPostalCode($postCode);
 
