@@ -1,23 +1,27 @@
-# social_insurance_number_validator
-Validator for social insurance number in Germany
+# German Postcode Validation
+Validator for postal code(s) in Germany
 
 ## Cloning & Installing Repository
 - Clone repository
     ```
-    git clone https://github.com/vladi-ri/social-insurance-number-validator.git
+    git clone https://github.com/vladi-ri/german-postcode-validation.git
     ```
 
 ## Usage
-### 1. Generate object of SINValidator - here with example SIN
-    <?php $validator = new SINValidator("04 260887 M 08 0"); ?>
-### 2. Get SIN from generated object
-    <?php $sin       = $validator->getSIN(); ?>
-### 3. Call main method of SINValidator
-    <?php $validator->validateSocialInsuranceNumber($sin)); ?>
+### 1. Generate object of GermanPostcodeValidator ...
+#### 1.1 with single example postal code
+    <?php $validator = new GermanPostcodeValidator("99085"); ?>
+#### 1.2 with multiple example postal codes as array
+    <?php $validator = new GermanPostcodeValidator(["99085", "07545"]); ?>
+### 2. Test single postal code
+    <?php
+        $postCode = "12345";
+        echo $validator->validateSinglePostalCode($postCode);
+    ?>
 
 ## Release Notes
 ### Current Release
 #### v1.0
-- Validation of example social insurance number, that is statically written into code.
+- Validation of example postal code, that can be validated by submitting the form.
 
 ### Future Releases
