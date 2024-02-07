@@ -40,7 +40,7 @@
          * Set REGEX for object
          * 
          * @access public
-         * @return string
+         * @return void
          */
         public function setRegex(string $regex) : void {
             $this->_REGEX = $regex;
@@ -60,7 +60,7 @@
          * Set postal code for object
          * 
          * @access public
-         * @return string
+         * @return void
          */
         public function setPostalCode(string $postalCode) : void {
             $this->_POSTAL_CODE = $postalCode;
@@ -70,7 +70,7 @@
          * Validate single postal code
          * 
          * @access public
-         * @return string
+         * @return string|false
          */
         public function validateSinglePostalCode(string $postalCode) : string|false {
             // 1. validate length
@@ -88,7 +88,7 @@
          * Validate postal code array
          * 
          * @access public
-         * @return array
+         * @return array|false
          */
         public function validatePostalCodeArray(string $postalCodeFromInput) : array|false {
             // convert string from input field into array
